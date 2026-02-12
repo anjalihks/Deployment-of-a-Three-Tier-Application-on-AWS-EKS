@@ -1,67 +1,189 @@
-📌 Project Overview
+# 🚀 3-Tier Cloud-Native Application on AWS EKS
 
-This project demonstrates deployment of a production-ready 3-tier application on Kubernetes using Amazon EKS.
+## 📌 Project Overview
+
+This project demonstrates deployment of a production-ready **3-tier cloud-native web application** on **Amazon EKS (Elastic Kubernetes Service)**.
 
 The application follows modern DevOps best practices including:
 
-Containerization using Docker
-Kubernetes orchestration
-Secure networking in AWS VPC
-CI/CD automation
+- Containerization using Docker
+- Kubernetes orchestration
+- Secure AWS networking
+- CI/CD automation
+- Scalable and resilient architecture
 
-Scalable and resilient architecture
-🏗️ Architecture
+---
 
-The system follows a 3-tier architecture model:
+## 🏗️ Architecture
 
-🟢 Tier 1 – Frontend
+<img width="1280" height="629" alt="image" src="https://github.com/user-attachments/assets/fb923a83-9f9a-4bd8-9367-9d60142b7cff" />
+<img width="800" height="336" alt="image" src="https://github.com/user-attachments/assets/9779d34a-d000-41c6-a01d-8820b43e0b61" />
 
-React-based web UI
-Exposed via Kubernetes Service (LoadBalancer / Ingress)
-Communicates with Backend API
 
-🔵 Tier 2 – Backend
 
-REST API built with Flask / Node.js
-Handles business logic
-Connects securely to MySQL database
-Deployed as Kubernetes Deployment
+The system is designed using a 3-tier architecture:
 
-🟡 Tier 3 – Database
+### 🟢 Tier 1 – Frontend
+- Built using React
+- Exposed via Kubernetes Service (LoadBalancer / Ingress)
+- Communicates with backend API
 
-MySQL database
-Runs inside Kubernetes with Persistent Volume
-Credentials managed using Kubernetes Secrets
+### 🔵 Tier 2 – Backend
+- REST API built with Flask / Node.js
+- Handles business logic
+- Connects securely to MySQL database
+- Deployed using Kubernetes Deployment
 
-☁️ Cloud Infrastructure
+### 🟡 Tier 3 – Database
+- MySQL database
+- Runs inside Kubernetes
+- Persistent storage using PV & PVC
+- Credentials managed via Kubernetes Secrets
 
-Cloud Provider: Amazon Web Services (AWS)
-Kubernetes: Amazon Elastic Kubernetes Service (EKS)
-Container Registry: Amazon ECR
-Networking: VPC with public & private subnets
-Load Balancer: AWS Application Load Balancer (ALB)
-IAM roles for secure cluster access
+---
 
-🔁 CI/CD Pipeline
+## ☁️ Cloud Infrastructure
 
-The project includes automated CI/CD workflow:
-Code pushed to GitHub
-Docker image built automatically
-Image pushed to Amazon ECR
-Kubernetes deployment updated
-Rolling update ensures zero downtime
+- Cloud Provider: AWS
+- Kubernetes Service: Amazon EKS
+- Container Registry: Amazon ECR
+- Networking: VPC with public & private subnets
+- Load Balancer: AWS Application Load Balancer (ALB)
+- IAM Roles for secure cluster access
 
-📦 Tech Stack
+---
 
-Docker
-Kubernetes
-Amazon EKS
-Amazon ECR
-AWS VPC
-MySQL
-Flask / Node.js
-React (Frontend)
-GitHub Actions (CI/CD)
+## 🔁 CI/CD Pipeline
+
+Automated CI/CD workflow:
+
+1. Code pushed to GitHub
+2. Docker image automatically built
+3. Image pushed to Amazon ECR
+4. Kubernetes manifests updated
+5. Rolling deployment applied to cluster
+
+Ensures zero-downtime deployments.
+
+---
+
+## 📦 Tech Stack
+
+- Docker
+- Kubernetes
+- Amazon EKS
+- Amazon ECR
+- AWS VPC
+- MySQL
+- Flask / Node.js
+- React
+- GitHub Actions
+
+---
+
+## ☸️ Kubernetes Components Used
+
+- Deployments
+- ReplicaSets
+- Services (ClusterIP, LoadBalancer)
+- Ingress Controller
+- ConfigMaps
+- Secrets
+- Persistent Volumes (PV)
+- Persistent Volume Claims (PVC)
+
+---
+
+## 🔐 Security Best Practices
+
+- Database credentials stored in Kubernetes Secrets
+- Private subnets for worker nodes
+- Security Groups restricting inbound/outbound traffic
+- IAM Roles for Service Accounts (IRSA)
+- Internal communication using ClusterIP
+
+---
+
+## 📈 Scalability & Reliability
+
+- Horizontal pod scaling
+- Rolling updates
+- Self-healing pods
+- Load balancing across replicas
+- Persistent storage for stateful workloads
+
+---
+
+## 🚀 Deployment Steps (High-Level)
+
+1. Create AWS EKS cluster
+2. Build Docker images for frontend and backend
+3. Push images to Amazon ECR
+4. Apply Kubernetes manifests
+5. Access application via LoadBalancer URL
+
+---
+
+## 📂 Project Structure
+
+├── frontend/
+├── backend/
+├── k8s/
+│ ├── frontend-deployment.yaml
+│ ├── backend-deployment.yaml
+│ ├── mysql-deployment.yaml
+│ ├── services.yaml
+│ ├── ingress.yaml
+│ └── pvc.yaml
+├── Dockerfile
+└── README.md
+
+
+---
+
+## 🎯 Key DevOps Concepts Demonstrated
+
+- Multi-tier architecture deployment
+- Container lifecycle management
+- Kubernetes orchestration
+- Cloud-native networking
+- Infrastructure isolation
+- CI/CD automation
+- Secure secret management
+- Rolling deployments
+
+---
+
+## 🏆 Production Highlights
+
+✔ 3-Tier Architecture  
+✔ Cloud Deployment on AWS EKS  
+✔ Dockerized Services  
+✔ CI/CD Pipeline Automation  
+✔ Scalable & Resilient Infrastructure  
+✔ Secure Configuration Management  
+
+---
+
+## 📚 Learning Outcomes
+
+Through this project, I gained hands-on experience in:
+
+- Deploying scalable applications on Kubernetes
+- Managing AWS cloud infrastructure
+- Automating build and deployment pipelines
+- Implementing DevOps best practices
+- Designing fault-tolerant architectures
+
+---
+
+## 📌 Future Enhancements
+
+- Add Horizontal Pod Autoscaler (HPA)
+- Integrate Prometheus & Grafana for monitoring
+- Implement Blue-Green deployment strategy
+- Use AWS RDS instead of in-cluster MySQL
+- Infrastructure provisioning using Terraform
 
 
 # three-tier-eks-iac
