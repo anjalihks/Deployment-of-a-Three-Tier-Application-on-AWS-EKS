@@ -74,10 +74,10 @@ Ensures zero-downtime deployments.
 - Amazon EKS
 - Amazon ECR
 - AWS VPC
-- MySQL
-- Flask / Node.js
+- MongoDB
+- Node.js
 - React
-- GitHub Actions
+- Jenkins
 
 ---
 
