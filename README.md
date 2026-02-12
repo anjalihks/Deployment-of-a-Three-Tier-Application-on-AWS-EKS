@@ -17,7 +17,7 @@ The application follows modern DevOps best practices including:
 ## 🏗️ Architecture
 
 <img width="1280" height="629" alt="image" src="https://github.com/user-attachments/assets/fb923a83-9f9a-4bd8-9367-9d60142b7cff" />
-<img width="800" height="336" alt="image" src="https://github.com/user-attachments/assets/9779d34a-d000-41c6-a01d-8820b43e0b61" />
+
 
 
 
@@ -123,6 +123,8 @@ Ensures zero-downtime deployments.
 5. Access application via LoadBalancer URL
 
 ---
+
+<img width="800" height="336" alt="image" src="https://github.com/user-attachments/assets/9779d34a-d000-41c6-a01d-8820b43e0b61" />
 
 ## 📂 Project Structure
 
