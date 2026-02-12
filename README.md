@@ -1,3 +1,69 @@
+📌 Project Overview
+
+This project demonstrates deployment of a production-ready 3-tier application on Kubernetes using Amazon EKS.
+
+The application follows modern DevOps best practices including:
+
+Containerization using Docker
+Kubernetes orchestration
+Secure networking in AWS VPC
+CI/CD automation
+
+Scalable and resilient architecture
+🏗️ Architecture
+
+The system follows a 3-tier architecture model:
+
+🟢 Tier 1 – Frontend
+
+React-based web UI
+Exposed via Kubernetes Service (LoadBalancer / Ingress)
+Communicates with Backend API
+
+🔵 Tier 2 – Backend
+
+REST API built with Flask / Node.js
+Handles business logic
+Connects securely to MySQL database
+Deployed as Kubernetes Deployment
+
+🟡 Tier 3 – Database
+
+MySQL database
+Runs inside Kubernetes with Persistent Volume
+Credentials managed using Kubernetes Secrets
+
+☁️ Cloud Infrastructure
+
+Cloud Provider: Amazon Web Services (AWS)
+Kubernetes: Amazon Elastic Kubernetes Service (EKS)
+Container Registry: Amazon ECR
+Networking: VPC with public & private subnets
+Load Balancer: AWS Application Load Balancer (ALB)
+IAM roles for secure cluster access
+
+🔁 CI/CD Pipeline
+
+The project includes automated CI/CD workflow:
+Code pushed to GitHub
+Docker image built automatically
+Image pushed to Amazon ECR
+Kubernetes deployment updated
+Rolling update ensures zero downtime
+
+📦 Tech Stack
+
+Docker
+Kubernetes
+Amazon EKS
+Amazon ECR
+AWS VPC
+MySQL
+Flask / Node.js
+React (Frontend)
+GitHub Actions (CI/CD)
+
+
 # three-tier-eks-iac
 
 # Prerequisite 
